@@ -35,16 +35,16 @@ namespace CustomCrossOut
         public static bool Prefix(ref RoleListItem __instance)
         {
             if (__instance.isCrossedOut)
-			{
+            {
                 int crossedOutOpacity = ModSettings.GetInt("Crossed Out Opacity %");
                 bool addStrikethrough = ModSettings.GetBool("Strikethrough Line");
 
                 if (addStrikethrough) {
-				    __instance.roleLabel.GetComponent<TMP_Text>().fontStyle |= FontStyles.Strikethrough;
+                    __instance.roleLabel.GetComponent<TMP_Text>().fontStyle |= FontStyles.Strikethrough;
                 }
 
-				__instance.roleLabel.GetComponent<TMP_Text>().alpha = crossedOutOpacity / 100f;
-			}
+                __instance.roleLabel.GetComponent<TMP_Text>().alpha = crossedOutOpacity / 100f;
+            }
             else {
                 __instance.roleLabel.GetComponent<TMP_Text>().fontStyle &= ~FontStyles.Strikethrough;
                 __instance.roleLabel.GetComponent<TMP_Text>().alpha = 1.0f;
