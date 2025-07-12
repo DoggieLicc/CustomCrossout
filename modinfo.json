@@ -1,0 +1,38 @@
+{
+  "HarmonyId": "doggielicc.customcrossout",
+  "DisplayName": "Custom Cross Out",
+  "Authors": [
+    "DoggieLicc"
+  ],
+  "Description": "Lets you customize how crossed out roles appear",
+  "Version": "1.0.0",
+  "RequiredMods": [],
+  "Settings": {
+    "CheckboxSettings": [
+      {
+        "Name": "Strikethrough Line",
+        "Description": "Enables/Disables the strikethrough line",
+        "DefaultValue": true,
+        "AvailableInGame": true
+      }
+    ],
+    "TextInputSettings": [
+    ],
+    "IntegerInputSettings": [
+      {
+        "Name": "Crossed Out Opacity %",
+        "Description": "The opacity of crossed out roles (0 = fully transparent, 100 = fully opaque)",
+        "DefaultValue": 100,
+        "MinValue": 0,
+        "MaxValue": 100,
+        "AvailableInGame": true
+      }
+    ],
+    "SliderSettings": [
+    ],
+    "DropdownSettings": [
+    ],
+    "ColorPickerSettings": [
+    ]
+  }
+}
