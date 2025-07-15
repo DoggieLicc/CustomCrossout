@@ -10,9 +10,15 @@
   "Settings": {
     "CheckboxSettings": [
       {
-        "Name": "Strikethrough Line",
-        "Description": "Enables/Disables the strikethrough line",
+        "Name": "Strikethrough Crossed Out Roles",
+        "Description": "Enables/Disables the strikethrough line on crossed out roles",
         "DefaultValue": true,
+        "AvailableInGame": true
+      },
+      {
+        "Name": "Italicize Crossed Out Roles",
+        "Description": "Enables/Disables italics on crossed out roles",
+        "DefaultValue": false,
         "AvailableInGame": true
       }
     ],
@@ -20,11 +26,19 @@
     ],
     "IntegerInputSettings": [
       {
-        "Name": "Crossed Out Opacity %",
+        "Name": "Crossed Out Roles Opacity %",
         "Description": "The opacity of crossed out roles (0 = fully transparent, 100 = fully opaque)",
         "DefaultValue": 100,
         "MinValue": 0,
         "MaxValue": 100,
+        "AvailableInGame": true
+      },
+      {
+        "Name": "Crossed Out Roles size",
+        "Description": "The size of crossed out roles (default = 25)",
+        "DefaultValue": 25,
+        "MinValue": 1,
+        "MaxValue": 50,
         "AvailableInGame": true
       }
     ],

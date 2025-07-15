@@ -24,19 +24,32 @@ namespace CustomCrossOut {
     [HarmonyPatch(typeof(RoleListItem), "ValidateCrossOut")]
     class ValidateCrossOut_Patch {
         public static bool Prefix(ref RoleListItem __instance) {
+            TMP_Text roleLabelText = __instance.roleLabel.GetComponent<TMP_Text>();
+
             if (__instance.isCrossedOut) {
                 int crossedOutOpacity = ModSettings.GetInt("Crossed Out Opacity %");
-                bool addStrikethrough = ModSettings.GetBool("Strikethrough Line");
+                bool addStrikethrough = ModSettings.GetBool("Strikethrough Crossed Out Roles");
+                bool addItalics = ModSettings.GetBool("Italicize Crossed Out Roles");
+                int fontSize = ModSettings.GetInt("Crossed Out Fontsize");
 
                 if (addStrikethrough) {
-                    __instance.roleLabel.GetComponent<TMP_Text>().fontStyle |= FontStyles.Strikethrough;
+                    roleLabelText.fontStyle |= FontStyles.Strikethrough;
                 }
 
-                __instance.roleLabel.GetComponent<TMP_Text>().alpha = crossedOutOpacity / 100f;
+                if (addItalics) {
+                    roleLabelText.fontStyle |= FontStyles.Italic;
+                }
+
+                roleLabelText.alpha = crossedOutOpacity / 100f;
+                roleLabelText.fontSizeMin = fontSize;
+                roleLabelText.fontSizeMax = fontSize;
             }
             else {
-                __instance.roleLabel.GetComponent<TMP_Text>().fontStyle &= ~FontStyles.Strikethrough;
-                __instance.roleLabel.GetComponent<TMP_Text>().alpha = 1.0f;
+                roleLabelText.fontStyle &= ~FontStyles.Strikethrough;
+                roleLabelText.fontStyle &= ~FontStyles.Italic;
+                roleLabelText.alpha = 1.0f;
+                roleLabelText.fontSizeMin = 25;
+                roleLabelText.fontSizeMax = 25;
             }
             return false;
         }
