@@ -27,10 +27,10 @@ namespace CustomCrossOut {
             TMP_Text roleLabelText = __instance.roleLabel.GetComponent<TMP_Text>();
 
             if (__instance.isCrossedOut) {
-                int crossedOutOpacity = ModSettings.GetInt("Crossed Out Opacity %");
+                int crossedOutOpacity = ModSettings.GetInt("Crossed Out Roles Opacity %");
                 bool addStrikethrough = ModSettings.GetBool("Strikethrough Crossed Out Roles");
                 bool addItalics = ModSettings.GetBool("Italicize Crossed Out Roles");
-                int fontSize = ModSettings.GetInt("Crossed Out Fontsize");
+                int fontSize = ModSettings.GetInt("Crossed Out Roles size");
 
                 if (addStrikethrough) {
                     roleLabelText.fontStyle |= FontStyles.Strikethrough;
