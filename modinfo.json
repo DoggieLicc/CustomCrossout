@@ -5,7 +5,7 @@
     "DoggieLicc"
   ],
   "Description": "Lets you customize how crossed out roles appear",
-  "Version": "1.0.0",
+  "Version": "1.1.1",
   "RequiredMods": [],
   "Settings": {
     "CheckboxSettings": [
