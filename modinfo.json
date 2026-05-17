@@ -5,7 +5,7 @@
     "DoggieLicc"
   ],
   "Description": "Lets you customize how crossed out roles appear",
-  "Version": "1.1.1",
+  "Version": "1.1.2",
   "RequiredMods": [],
   "Settings": {
     "CheckboxSettings": [
@@ -13,12 +13,6 @@
         "Name": "Strikethrough Crossed Out Roles",
         "Description": "Enables/Disables the strikethrough line on crossed out roles",
         "DefaultValue": true,
-        "AvailableInGame": true
-      },
-      {
-        "Name": "Italicize Crossed Out Roles",
-        "Description": "Enables/Disables italics on crossed out roles",
-        "DefaultValue": false,
         "AvailableInGame": true
       }
     ],

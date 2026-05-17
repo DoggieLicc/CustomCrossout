@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
+    <Nullable>disable</Nullable>
+    <LangVersion>12.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +22,7 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>lib/Managed/Assembly-CSharp.dll</HintPath>
     </Reference>
-        
+
     <Reference Include="0Harmony">
       <HintPath>lib/BepInEx/core/0Harmony.dll</HintPath>
     </Reference>
@@ -30,8 +31,8 @@
       <HintPath>lib/BepInEx/core/BepInEx.dll</HintPath>
     </Reference>
 
-    <Reference Include="SalemModLoader">
-      <HintPath>lib/BepInEx/plugins/SalemModLoader.dll</HintPath>
+    <Reference Include="SalemModLoader, Version=0.7.3.0, Culture=neutral, ...">
+      <HintPath>lib/SalemModLoader.dll</HintPath>
     </Reference>
 
     <Reference Include="UnityEngine.UI">
@@ -45,8 +46,5 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>lib/Managed/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-
   </ItemGroup>
-
 </Project>
-
